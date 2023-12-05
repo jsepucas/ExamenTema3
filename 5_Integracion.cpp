@@ -50,7 +50,10 @@ int main() {
 
     myEnvironment.addSymbol("x", 42);
     myEnvironment.addSymbol("y", 2.17);
-    myEnvironment.addSymbol("nombre", "Juan");
+    myEnvironment.addSymbol("Nombre", "Juan");
 
+    Variant::Value valueX = myEnvironment.getSymbolValue("x");
+    Variant::Value valueY = myEnvironment.getSymbolValue("y");
+    Variant::Value valueName = myEnvironment.getSymbolValue("Nombre");
 
 
