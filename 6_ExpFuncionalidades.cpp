@@ -49,3 +49,24 @@ public:
         return symbols.find(name) != symbols.end();
     }
 
+    string isVariableReadOnly(const string& name) const {
+        auto it = symbols.find(name);
+        if (it != symbols.end()) {
+            return (it->second.second) ? "Sí" : "No";
+        } else {
+            throw runtime_error("Variable del juego '" + name + "' no encontrada");
+        }
+    }
+
+    void clearEnvironment() {
+        symbols.clear();
+    }
+
+    vector<string> getAllVariables() const {
+        std::vector<string> variableList;
+        for (const auto& pair : symbols) {
+            variableList.push_back(pair.first);
+        }
+        return variableList;
+    }
+
