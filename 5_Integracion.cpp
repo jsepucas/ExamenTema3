@@ -56,4 +56,9 @@ int main() {
     Variant::Value valueY = myEnvironment.getSymbolValue("y");
     Variant::Value valueName = myEnvironment.getSymbolValue("Nombre");
 
+    Variant variantX(valueX);
+    Variant variantY(valueY);
+    Variant variantName(valueName);
+
+
 
