@@ -29,4 +29,15 @@ public:
     }
 
 private:
+    map<string, Value> simbolos;
+};
+void printVariable(const optional<Entorno::Value>& value, const string& name) {
+    if (value) {
+        visit([&name](const auto& v) { cout << "Valor de '" << name << "': " << v << endl; }, *value);
+    } else {
+        cout << "La variable '" << name << "' no existe." << endl;
+    }
+}
+
+
 
