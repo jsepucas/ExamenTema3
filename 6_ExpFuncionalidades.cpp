@@ -32,3 +32,9 @@ public:
             throw std::runtime_error("La variable del juego '" + name + "' no existe");
         }
 
+        try {
+            return get<T>(it->second.first);
+        } catch (const bad_variant_access&) {
+            throw runtime_error("Tipo incorrecto para la variable '" + name + "'");
+        }
+    }
