@@ -45,6 +45,13 @@ int main() {
         gameEnv.setVariable("NombreJugador", string("Hero")); // Nombre del jugador
         gameEnv.setVariable("maxSalud", 200); // Intento fallido de modificar una constante
 
+        cout << "Salud Máxima: " << get<int>(gameEnv.getVariable("maxSalud")) << endl;
+        cout << "Salud del Jugador: " << get<int>(gameEnv.getVariable("JugadorSalud")) << endl;
+        cout << "Nombre del Jugador: " << get<string>(gameEnv.getVariable("NombreJugador")) << endl;
+    } catch (const runtime_error& e) {
+        cerr << "Ha habido un error en el juego: " << e.what() << endl;
+    }
+
 
 
 
