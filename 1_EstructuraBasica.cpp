@@ -7,9 +7,15 @@
 using namespace std;
 
 class Entorno {
-private:
-    map<string, Variant> symbolTable;
-
 public:
+    Entorno () = default;
+
+    Entorno (const Entorno&) = delete;
+    Entorno& operator=(const Entorno&) = delete;
+
+    void setVariable(const string& nombre, const variant<int, double, string>& valor) {
+        simbolos[nombre] = valor;
+    }
+
 
 };
