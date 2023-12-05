@@ -23,6 +23,18 @@ public:
         auto it = symbols.find(name);
         if (it != symbols.end()) {
             try {
+                return get<T>(it->second);
+            } catch (const bad_variant_access&) {
+                throw runtime_error("Tipo de variable incorrecto para " + name);
+            }
+
+            } else {
+        throw runtime_error("La Variable no fue encontrada: " + name);
+            }
+    }
+private:
+    map<string, variant<int, double, string>> simbolos;
+};
 
 
 
