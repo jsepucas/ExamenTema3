@@ -46,7 +46,7 @@ private:
 };
 
 int main() {
-    Environment myEnvironment;
+    Entorno myEnvironment;
 
     myEnvironment.addSymbol("x", 42);
     myEnvironment.addSymbol("y", 2.17);
@@ -63,6 +63,13 @@ int main() {
     cout << "Valor de x: ";
     variantX.printValue();
 
+    cout << "Valor de y: ";
+    variantY.printValue();
 
+    cout << "Valor de nombre: ";
+    variantName.printValue();
+
+    return 0;
+}
 
 
