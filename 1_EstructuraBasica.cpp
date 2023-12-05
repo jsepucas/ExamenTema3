@@ -45,7 +45,7 @@ private:
 int main() {
     Entorno gameEnvironment;
 // Establezco las distintas variables
-    gameEnvironment.setVariable("VidaJugador", 200);
+    gameEnvironment.setVariable("VidaJugador", 500);
     gameEnvironment.setVariable("Puntuacion", 10);
     gameEnvironment.setVariable("NombreNivel", string("Casa Abandonada"));
 
