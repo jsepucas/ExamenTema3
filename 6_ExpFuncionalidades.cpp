@@ -75,7 +75,7 @@ private:
 };
 
 int main() {
-    Environment gameEnv;
+    Entorno gameEnv;
 
     gameEnv.setVariable("playerHealth", 200);
     gameEnv.setVariable("playerName", std::string("Mario"));
@@ -102,7 +102,18 @@ int main() {
     if (variableList.empty()) {
         cout << "No hay variables en el entorno." << endl;
 
+    } else {
+        for (const auto& var : variableList) {
+            cout << "- " << var << endl;
+        }
+    }
 
+    gameEnv.clearEnvironment();
+
+    cout << "El entorno esta vacio? " << (gameEnv.getAllVariables().empty() ? "Si" : "No") << endl;
+
+    return 0;
+}
 
 
 
