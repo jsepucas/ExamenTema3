@@ -36,3 +36,16 @@ try {
 
     }
 private:
+    std::map<std::string, std::variant<int, double, std::string>> simbolos;
+};
+
+int main() {
+    Entorno gameEnvironment;
+
+
+    bool inserted = gameEnvironment.insert("VidaJugador", 100);
+   cout << "'vidaJugador' ha sido insertada? " << (inserted ? "Si" : "No") << std::endl;
+
+
+
+
