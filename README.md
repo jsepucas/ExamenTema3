@@ -15,7 +15,7 @@ https://github.com/jsepucas/ExamenTema3.git
    
    b) Convierte un objeto Variant a una cadena JSON
 
-4.¿Qué función cumple el método from_json_string() en la clase Variant?
+4. ¿Qué función cumple el método from_json_string() en la clase Variant?
 
    a) Convierte una cadena JSON en un objeto variant
    
