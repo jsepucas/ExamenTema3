@@ -60,5 +60,9 @@ int main() {
     Variant variantY(valueY);
     Variant variantName(valueName);
 
+    cout << "Valor de x: ";
+    variantX.printValue();
+
+
 
 
