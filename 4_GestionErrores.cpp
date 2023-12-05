@@ -29,4 +29,13 @@ public:
         if (it == simbolos.end()) {
             throw runtime_error("La variable del juego '" + name + "' no existe");
         }
+        return it->second.first;
+    }
 
+private:
+    map<string, pair<Value, bool>> simbolos; // El booleano indica si es de solo lectura
+};
+
+int main() {
+
+}
