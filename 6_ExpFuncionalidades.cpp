@@ -45,3 +45,7 @@ public:
             symbols.erase(it);
         }
     }
+    bool hasVariable(const std::string& name) const {
+        return symbols.find(name) != symbols.end();
+    }
+
