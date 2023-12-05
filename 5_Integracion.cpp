@@ -20,3 +20,6 @@ public:
         visit([](const auto& v) { std::cout << v; }, value);
         cout << endl;
     }
+private:
+    Value value;
+};
