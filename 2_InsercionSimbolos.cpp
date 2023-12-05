@@ -13,3 +13,7 @@ public:
     Entorno(const Entorno&) = delete;
     Entorno& operator=(const Entorno&) = delete;
 
+    bool insert(const std::string& name, const std::variant<int, double, std::string>& value) {
+        auto result = simbolos.insert({name, value});
+        return result.second;
+    }
