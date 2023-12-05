@@ -43,6 +43,12 @@ int main() {
     gameEnvironment.setVariable("Puntuacion", 0);
     gameEnvironment.setVariable("NombreNivel", string("Casa Abandonada"));
 
+    try {
+        cout << "Vida del Jugador: " << gameEnvironment.getVariable<int>("VidaJugador") << endl;
+        cout << "Puntuacion: " << gameEnvironment.getVariable<int>("Puntuacion") << endl;
+        cout << "Nombre del Nivel: " << gameEnvironment.getVariable<string>("NombreNivel") << endl;
+    } catch (const runtime_error& e) {
+
 
 
 
