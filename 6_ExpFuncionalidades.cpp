@@ -74,4 +74,12 @@ private:
     std::map<std::string, std::pair<Value, bool>> symbols;
 };
 
+int main() {
+    Environment gameEnv;
+
+    gameEnv.setVariable("playerHealth", 200);
+    gameEnv.setVariable("playerName", std::string("Mario"));
+    gameEnv.setVariable("maxHealth", 300, true);
+
+
 
