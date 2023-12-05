@@ -39,5 +39,16 @@ void printVariable(const optional<Entorno::Value>& value, const string& name) {
     }
 }
 
+int main(){
+    Entorno env;
+
+    env.setVariable("testInt", 100);
+    env.setVariable("testString", string("Hola"));
+
+    printVariable(env.lookup("testInt"), "testInt");
+    printVariable(env.lookup("nonExistent"), "nonExistent");
+
+    return 0;
+}
 
 
