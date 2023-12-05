@@ -87,6 +87,17 @@ int main() {
     string varName = "maxHealth";
     cout << "Es '" << varName << "' de solo lectura? " << gameEnv.isVariableReadOnly(varName) << endl;
 
+    try {
+        gameEnv.setVariable("maxHealth", 500);
+    } catch (const runtime_error& e) {
+        cerr << "Error: " << e.what() << endl;
+    }
+    gameEnv.removeVariable("NombreJugador");
+
+    string deletedVarName = "playerName";
+    cout << "Existe '" << deletedVarName << "' en el entorno? " << (gameEnv.hasVariable(deletedVarName) ? "Sí" : "No") << endl;
+
+
 
 
 
