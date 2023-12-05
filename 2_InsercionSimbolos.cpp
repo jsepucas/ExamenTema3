@@ -3,3 +3,5 @@
 #include <string>
 #include <stdexcept>
 #include <variant>
+
+using namespace std;
