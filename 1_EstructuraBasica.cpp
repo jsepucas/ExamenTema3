@@ -8,5 +8,8 @@ using namespace std;
 
 class Entorno {
 private:
+    map<string, Variant> symbolTable;
+
+public:
 
 };
