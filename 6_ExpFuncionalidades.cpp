@@ -38,3 +38,10 @@ public:
             throw runtime_error("Tipo incorrecto para la variable '" + name + "'");
         }
     }
+
+    void removeVariable(const std::string& name) {
+        auto it = symbols.find(name);
+        if (it != symbols.end()) {
+            symbols.erase(it);
+        }
+    }
