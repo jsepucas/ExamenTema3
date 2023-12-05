@@ -23,3 +23,11 @@ public:
 private:
     Value value;
 };
+
+class Entorno {
+public:
+
+    void addSymbol(const std::string& symbol, const Variant::Value& value) {
+        symbolTable[symbol] = value;
+    }
+
