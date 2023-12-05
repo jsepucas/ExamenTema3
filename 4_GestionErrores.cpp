@@ -37,5 +37,15 @@ private:
 };
 
 int main() {
+    Entorno gameEnv;
 
-}
+    try {
+        gameEnv.setVariable("maxSalud", 100, true); // Constante del juego
+        gameEnv.setVariable("JugadorSalud", 100);   // Variable del juego
+        gameEnv.setVariable("NombreJugador", string("Hero")); // Nombre del jugador
+        gameEnv.setVariable("maxSalud", 200); // Intento fallido de modificar una constante
+
+
+
+
+    }
