@@ -4,3 +4,9 @@
 #include <stdexcept>
 #include "Variant.h"
 
+using namespace std;
+
+class Entorno {
+private:
+
+};
