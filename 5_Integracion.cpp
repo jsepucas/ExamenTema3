@@ -45,5 +45,12 @@ private:
     std::map<std::string, Variant::Value> symbolTable;
 };
 
+int main() {
+    Environment myEnvironment;
+
+    myEnvironment.addSymbol("x", 42);
+    myEnvironment.addSymbol("y", 2.17);
+    myEnvironment.addSymbol("nombre", "Juan");
+
 
 
