@@ -24,4 +24,9 @@ public:
         }
     }
 
+    Value getVariable(const string& name) const {
+        auto it = simbolos.find(name);
+        if (it == simbolos.end()) {
+            throw runtime_error("La variable del juego '" + name + "' no existe");
+        }
 
