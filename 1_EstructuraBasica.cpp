@@ -36,6 +36,15 @@ private:
     map<string, variant<int, double, string>> simbolos;
 };
 
+int main() {
+    Entorno gameEnvironment;
+
+    gameEnvironment.setVariable("VidaJugador", 100);
+    gameEnvironment.setVariable("Puntuacion", 0);
+    gameEnvironment.setVariable("NombreNivel", string("Casa Abandonada"));
+
+
+
 
 
 
