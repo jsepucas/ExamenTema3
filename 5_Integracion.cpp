@@ -41,3 +41,9 @@ public:
         }
     }
 
+private:
+    std::map<std::string, Variant::Value> symbolTable;
+};
+
+
+
