@@ -25,5 +25,14 @@ public:
     T getVariable(const std::string& name) const {
         auto it = simbolos.find(name);
         if (it != simbolos.end()) {
-
+try {
+                return std::get<T>(it->second);
+            } catch (const std::bad_variant_access&) {
+                throw std::runtime_error("El Tipo de variable es incorrecto para " + name);
+            }
+        } else {
+            throw std::runtime_error("Variable no fue encontrada: " + name);
         }
+
+    }
+private:
