@@ -48,6 +48,10 @@ int main() {
         cout << "Puntuacion: " << gameEnvironment.getVariable<int>("Puntuacion") << endl;
         cout << "Nombre del Nivel: " << gameEnvironment.getVariable<string>("NombreNivel") << endl;
     } catch (const runtime_error& e) {
+        cerr << "Error: " << e.what() << endl;
+    }
+
+
 
 
 
