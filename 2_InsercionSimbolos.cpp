@@ -17,3 +17,13 @@ public:
         auto result = simbolos.insert({name, value});
         return result.second;
     }
+    void setVariable(const std::string& name, const std::variant<int, double, std::string>& value) {
+        simbolos[name] = value;
+    }
+
+    template<typename T>
+    T getVariable(const std::string& name) const {
+        auto it = simbolos.find(name);
+        if (it != simbolos.end()) {
+
+        }
