@@ -3,6 +3,8 @@
 #include <string>
 #include <variant>
 
+using namespace std;
+
 class Variant {
 public:
 
@@ -12,4 +14,9 @@ public:
 
     Value getValue() const {
         return value;
+    }
+
+    void printValue() const {
+        visit([](const auto& v) { std::cout << v; }, value);
+        cout << endl;
     }
