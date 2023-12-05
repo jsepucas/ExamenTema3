@@ -14,3 +14,8 @@ public:
 
     Entorno(const Entorno&) = delete;
     Entorno& operator=(const Entorno&) = delete;
+
+    void setVariable(const string& name, const Value& value) {
+        simbolos[name] = value;
+    }
+
