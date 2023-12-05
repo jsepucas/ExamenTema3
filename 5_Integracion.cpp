@@ -27,7 +27,17 @@ private:
 class Entorno {
 public:
 
-    void addSymbol(const std::string& symbol, const Variant::Value& value) {
+    void addSymbol(const string& symbol, const Variant::Value& value) {
         symbolTable[symbol] = value;
+    }
+
+    Variant::Value getSymbolValue(const string& symbol) const {
+        auto it = symbolTable.find(symbol);
+        if (it != symbolTable.end()) {
+            return it->second;
+        } else {
+            cerr << "Error: El simbolo '" << symbol << "' no esta definido." << endl;
+            return Variant::Value{};
+        }
     }
 
