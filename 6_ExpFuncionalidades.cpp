@@ -70,3 +70,8 @@ public:
         return variableList;
     }
 
+private:
+    std::map<std::string, std::pair<Value, bool>> symbols;
+};
+
+
