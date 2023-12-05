@@ -57,3 +57,9 @@ int main() {
     gameEnv.setVariable("Salud", 100);
     gameEnv.setVariable("Puntos", 5000);
 
+    cout << "Dificultad del Juego: " << gameEnv.getVariableAs<string>("Dificultad") << endl;
+    cout << "Salud del Jugador: " << gameEnv.getVariableAs<int>("Salud") << endl;
+    cout << "Puntaje Objetivo: " << gameEnv.getVariableAs<int>("Puntos") << endl;
+
+    return 0;
+}
