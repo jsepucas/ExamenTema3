@@ -24,3 +24,11 @@ public:
             iter->second.first = value;
         }
     }
+
+    template<typename T>
+    T getVariableAs(const std::string& name) const {
+        auto it = symbols.find(name);
+        if (it == symbols.end()) {
+            throw std::runtime_error("La variable del juego '" + name + "' no existe");
+        }
+
