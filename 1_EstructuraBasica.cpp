@@ -2,7 +2,7 @@
 #include <map>
 #include <string>
 #include <stdexcept>
-#include "Variant.h"
+#include <variant>
 
 using namespace std;
 
@@ -15,7 +15,16 @@ public:
 
     void setVariable(const string& nombre, const variant<int, double, string>& valor) {
         simbolos[nombre] = valor;
+
     }
+
+    template<typename T>
+    T getVariable(const string& name) const {
+        auto it = symbols.find(name);
+        if (it != symbols.end()) {
+            try {
+
+
 
 
 };
