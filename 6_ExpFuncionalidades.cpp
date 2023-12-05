@@ -97,6 +97,13 @@ int main() {
     string deletedVarName = "playerName";
     cout << "Existe '" << deletedVarName << "' en el entorno? " << (gameEnv.hasVariable(deletedVarName) ? "Sí" : "No") << endl;
 
+    cout << "Variables en el entorno:" << endl;
+    vector<string> variableList = gameEnv.getAllVariables();
+    if (variableList.empty()) {
+        cout << "No hay variables en el entorno." << endl;
+
+
+
 
 
 
