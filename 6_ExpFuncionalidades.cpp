@@ -81,5 +81,12 @@ int main() {
     gameEnv.setVariable("playerName", std::string("Mario"));
     gameEnv.setVariable("maxHealth", 300, true);
 
+    cout << "Salud del Jugador: " << gameEnv.getVariableAs<int>("playerHealth") << endl;
+    cout << "Nombre del Jugador: " << gameEnv.getVariableAs<std::string>("playerName") << endl;
+
+    string varName = "maxHealth";
+    cout << "Es '" << varName << "' de solo lectura? " << gameEnv.isVariableReadOnly(varName) << endl;
+
+
 
 
