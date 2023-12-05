@@ -23,4 +23,10 @@ public:
         auto it = simbolos.find(name);
         if (it != simbolos.end()) {
             return it->second;
+        } else {
+            return nullopt;
+        }
+    }
+
+private:
 
