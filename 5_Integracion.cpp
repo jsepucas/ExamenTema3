@@ -3,3 +3,13 @@
 #include <string>
 #include <variant>
 
+class Variant {
+public:
+
+    using Value = std::variant<int, double, std::string>;
+
+    Variant(const Value& val) : value(val) {}
+
+    Value getValue() const {
+        return value;
+    }
